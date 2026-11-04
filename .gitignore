@@ -1,0 +1,8 @@
+node_modules/
+.direnv/
+result
+result-*
+keys/
+bundles/
+*.bin
+*.bundle.json
