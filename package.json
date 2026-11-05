@@ -1,0 +1,14 @@
+{
+  "name": "t3router",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "engines": { "node": ">=24.10.0" },
+  "bin": { "t3router": "./src/cli.mjs" },
+  "scripts": {
+    "test": "node --disable-warning=ExperimentalWarning --test test/*.test.mjs",
+    "test:mutation": "node --disable-warning=ExperimentalWarning test/mutation.mjs",
+    "check": "node --check src/provision.mjs && node --check src/cli.mjs"
+  }
+}

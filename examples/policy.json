@@ -1,0 +1,28 @@
+{
+  "format": 1,
+  "t3Version": "0.1.6",
+  "revision": 1,
+  "environments": {
+    "laptop": {
+      "id": "11111111-1111-4111-8111-111111111111",
+      "label": "laptop",
+      "urls": ["http://127.0.0.1:3773"]
+    },
+    "worker": {
+      "id": "22222222-2222-4222-8222-222222222222",
+      "label": "worker",
+      "urls": ["https://worker.example.ts.net"]
+    },
+    "server": {
+      "id": "33333333-3333-4333-8333-333333333333",
+      "label": "server",
+      "urls": ["https://server.example.ts.net"]
+    }
+  },
+  "links": [
+    {"from": "laptop", "to": "worker", "access": "approval-required", "generation": 1},
+    {"from": "laptop", "to": "server", "access": "read-only", "generation": 1},
+    {"from": "worker", "to": "server", "access": "read-only", "generation": 1},
+    {"from": "server", "to": "worker", "access": "approval-required", "generation": 1}
+  ]
+}
